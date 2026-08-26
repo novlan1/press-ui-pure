@@ -74,7 +74,7 @@
       mode="functional"
     />
 
-    <PressDatetimePickerPopup
+    <PressDatetimePickerPopupPlus
       :id="FUNCTIONAL_ID_MAP.DATE_TIME_PICKER"
       :ref="FUNCTIONAL_ID_MAP.DATE_TIME_PICKER"
       mode="functional"
@@ -83,16 +83,16 @@
 </template>
 <script>
 import PressCell from 'press-ui/press-cell/press-cell.vue';
-import PressDatetimePickerPopup from 'press-ui/press-datetime-picker/press-datetime-picker-popup.vue';
+import PressDatetimePickerPopupPlus from 'press-ui/press-datetime-picker/press-datetime-picker-popup-plus.vue';
 import PressPickerPlus from 'press-ui/press-picker-plus/press-picker-plus.vue';
 import PressPopupCell from 'press-ui/press-popup-cell/press-popup-cell.vue';
 
 import {
   FUNCTIONAL_ID_MAP,
   showPopupCell,
-} from 'src/press-ui/src/packages/press-popup-cell/demo-helper/helper';
-import { battleSet,  startMatchSet } from 'src/press-ui/src/packages/press-popup-cell/demo-helper/popup';
-import { batchSet } from 'src/press-ui/src/packages/press-popup-cell/demo-helper/popup-batch';
+} from 'press-ui/press-popup-cell/demo-helper/helper';
+import { battleSet,  startMatchSet } from 'press-ui/press-popup-cell/demo-helper/popup';
+import { batchSet } from 'press-ui/press-popup-cell/demo-helper/popup-batch';
 
 
 const local = {
@@ -164,7 +164,7 @@ export default {
   },
   components: {
     PressPopupCell,
-    PressDatetimePickerPopup,
+    PressDatetimePickerPopupPlus,
     PressPickerPlus,
     PressCell,
   },
