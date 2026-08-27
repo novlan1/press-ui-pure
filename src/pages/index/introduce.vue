@@ -24,6 +24,9 @@ import { getPressUIIntroduce, DEFAULT_PRESS_UI_INTRODUCE } from 'press-ui/press-
 
 
 export default {
+  // 组件名：与 src/project/press-ui-pure/views/press/index.vue 的 cachedPageNames
+  // 白名单对应，让 keep-alive 能缓存 introduce 页面（保留协议列表滚动位置等）。
+  name: 'PageIntroduce',
   components: {
     PressProtocol,
   },

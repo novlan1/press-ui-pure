@@ -32,6 +32,9 @@ const DETAIL = 'Press UI 是一套易用、灵活、基于 uni-app 的组件库'
 
 
 export default {
+  // 组件名：与 src/project/press-ui-pure/views/press/index.vue 的 cachedPageNames
+  // 白名单对应，让 keep-alive 能识别并缓存首页组件（保留 PressDemoIndex 的 activeNames 折叠状态）。
+  name: 'PageIndex',
   i18n: {
     'zh-CN': {
       name: '全端兼容 高性能',
