@@ -12,7 +12,7 @@
         @click.stop="onBack"
       >
         <div class="uni-page-head-btn">
-          <PressIconPlus
+          <PressIcon
             v-if="showBack"
             name="arrow-left"
             style="color: rgb(0, 0, 0); font-size: 22px;"
@@ -33,11 +33,11 @@
   </div>
 </template>
 <script>
-import PressIconPlus from 'press-ui/press-icon-plus/press-icon-plus.vue';
+import PressIcon from 'press-ui/press-icon/press-icon.vue';
 
 export default {
   components: {
-    PressIconPlus,
+    PressIcon,
   },
   props: {
   },
