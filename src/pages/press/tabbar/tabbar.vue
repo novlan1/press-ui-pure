@@ -134,18 +134,32 @@
         >
           <template #icon>
             <img
+              v-if="isNotInUni()"
               :src="icon.normal"
               mode="aspectFit"
               style="width: 23px; height: 18px;"
             >
+            <image
+              v-else
+              :src="icon.normal"
+              mode="aspectFit"
+              style="width: 23px; height: 18px;"
+            />
           </template>
 
           <template #icon-active>
             <img
+              v-if="isNotInUni()"
               :src="icon.active"
               mode="aspectFit"
               style="width: 23px; height: 18px;"
             >
+            <image
+              v-else
+              :src="icon.active"
+              mode="aspectFit"
+              style="width: 23px; height: 18px;"
+            />
           </template>
           {{ t('custom') }}
         </PressTabbarItem>
@@ -207,6 +221,7 @@
 <script>
 import PressTabbarItem from 'press-ui/press-tabbar-item/press-tabbar-item.vue';
 import PressTabbar from 'press-ui/press-tabbar/press-tabbar.vue';
+import { isNotInUni } from 'press-ui/common/utils/utils';
 
 
 export default {
@@ -240,8 +255,8 @@ export default {
       sectionStyle: 'margin: 0;',
 
       icon: {
-        normal: 'https://mike-1255355338.cos.ap-guangzhou.myqcloud.com/press%2Fimg%2Fuser-inactive.png',
-        active: 'https://mike-1255355338.cos.ap-guangzhou.myqcloud.com/press%2Fimg%2Fuser-active.png',
+        normal: 'https://cdn.uwayfly.com/press/img/user-inactive.png',
+        active: 'https://cdn.uwayfly.com/press/img/user-active.png',
       },
     };
   },
@@ -255,6 +270,7 @@ export default {
     },
   },
   methods: {
+    isNotInUni,
     onChange(val) {
       console.log('val', val);
       this.active = val;
